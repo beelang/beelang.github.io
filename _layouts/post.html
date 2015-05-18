@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<article>
+  <header>
+    <p>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </p>
+
+    <p>
+      {% for author in page.authors %}
+        <img class="img img-circle" src="/{{ author | slugify }}.jpg">
+        <small>{{author}}</small>
+      {% endfor %}
+    </p>
+
+    <p>
+      <time>{{ page.date | date: "%Y/%m/%d" }}</time>
+    </p>
+  </header>
+
+  {{ content }}
+</article>
+
+{% include footer.html %}

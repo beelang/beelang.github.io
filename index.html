@@ -1,0 +1,38 @@
+---
+layout: "page"
+title: "Home"
+---
+
+<section id="posts">
+  <header>
+    <p>Posts</p>
+  </header>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li class="post" data-author="{{ post.author }}" data-title="{{ post.title }}" data-timestamp="{{ post.date }}">
+        <article>
+          <header>
+            <p>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </p>
+
+            <p>
+              by {{ post.authors | join: ", " }}
+            </p>
+
+            <p>
+              {{ post.date | date: "%Y/%m/%d" }}
+            </p>
+          </header>
+
+          <section>
+            <p>
+              {{ post.blurb }}
+            </p>
+          </section>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

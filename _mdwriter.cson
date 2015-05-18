@@ -1,0 +1,16 @@
+siteEngine: "jekyll"
+siteLocalDir: "/Users/krainboltgreene/code/organization/blankjekyll.github.io"
+siteDraftsDir: "_drafts/"
+sitePostsDir: "_posts/"
+siteImagesDir: "/"
+siteUrl: "http://blankjekyll.github.io"
+frontMatter: """
+---
+layout: <layout>
+title: "<title>"
+summary: ""
+date: <date>
+authors:
+  - "Kurtis Rainbolt-Greene"
+---
+"""

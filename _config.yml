@@ -1,0 +1,16 @@
+# Site settings
+title: "Blog Title"
+description: "The blog description."
+
+# Build settings
+markdown: redcarpet
+permalink: /:title/
+exclude:
+  - Gemfile
+  - LICENSE
+  - README.md
+  - CNAME
+  - .ruby-gemset
+  - .ruby-version
+  - .gitignore
+  - _mdwriter.cson
