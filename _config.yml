@@ -14,3 +14,4 @@ exclude:
   - .ruby-version
   - .gitignore
   - _mdwriter.cson
+  - _sass
