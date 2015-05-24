@@ -18,5 +18,3 @@
 # Ignoring the compiled assets
 /_site/
 /.sass-cache/
-/_sass/
-!/_sass/core.sass
