@@ -1,5 +1,5 @@
 siteEngine: "jekyll"
-siteLocalDir: "/Users/krainboltgreene/code/organization/blankjekyll.github.io"
+siteLocalDir: "/Users/krainboltgreene/code/krainboltgreene/blankjekyll"
 siteDraftsDir: "_drafts/"
 sitePostsDir: "_posts/"
 siteImagesDir: "/"
