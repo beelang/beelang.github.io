@@ -2,6 +2,7 @@
 title: "Blog Title"
 description: "The blog description."
 github: "http://github.com/organization/blankjekyll.github.io"
+logo: "http://github.com/krainboltgreene.png"
 copyright:
   title: "Blog Title"
   author: "Kurtis Rainbolt-Greene"
