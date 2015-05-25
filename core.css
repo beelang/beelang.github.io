@@ -291,37 +291,39 @@ body > footer {
     font-size: 1.8em; }
 
 #post {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.35765%;
   min-height: 700px; }
+  #post::after {
+    clear: both;
+    content: "";
+    display: table; }
   #post header {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto; }
-    #post header::after {
-      clear: both;
-      content: "";
-      display: table; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #post header:last-child {
+      margin-right: 0; }
     #post header .heading {
       font-size: 2.7em; }
-    #post header #title {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      #post header #title:last-child {
-        margin-right: 0; }
-    #post header #date {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      #post header #date:last-child {
-        margin-right: 0; }
-    #post header #authors {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      #post header #authors:last-child {
-        margin-right: 0; }
+    #post header #authors .avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      vertical-align: center; }
+  #post #content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #post #content:last-child {
+      margin-right: 0; }
+    #post #content blockquote {
+      background-color: #ecf0f1; }
 
 /*# sourceMappingURL=core.css.map */

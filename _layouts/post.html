@@ -3,32 +3,28 @@ layout: default
 ---
 {% include header.html %}
 
-<article id="post">
+<main id="post">
   <header>
     <h1 id="title" class="heading">
       <a href="{{ page.url }}">{{ page.title }}</a>
     </h1>
 
     <p id="date">
-      <time>{{ page.date | date: "%Y/%m/%d" }}</time>
+      Last updated <time>{{ page.date | date: "%Y/%m/%d" }}</time>.
     </p>
 
-    <ul class="authors">
+    <p id="authors">
+      Written by
       {% for author in page.authors %}
-        <li class="author">
-          <figure class="bio">
-            <img class="avatar" src="/{{ author | slugify }}.jpg" alt="{{ author }}">
-
-            <figcaption>
-              {{ author }}
-            </figcaption>
-          </figure>
-        </li>
+        <a href="mailto:{{ author }}">{{ author }}</a>
+        <img class="avatar" src="/{{ author | slugify }}.jpg" alt="{{ author }}">
       {% endfor %}
-    </ul>
+    </p>
   </header>
 
-  {{ content }}
-</article>
+  <article id="content">
+    {{ content }}
+  </article>
+</main>
 
 {% include footer.html %}
