@@ -1,9 +1,9 @@
 siteEngine: "jekyll"
-siteLocalDir: "/Users/krainboltgreene/code/krainboltgreene/blankjekyll"
+siteLocalDir: "/Users/krainboltgreene/code/dragonlang/dragonlang.github.io"
 siteDraftsDir: "_drafts/"
 sitePostsDir: "_posts/"
 siteImagesDir: "/"
-siteUrl: "http://blankjekyll.github.io"
+siteUrl: "http://dragonlang.github.io"
 frontMatter: """
 ---
 layout: <layout>
