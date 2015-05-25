@@ -5,6 +5,7 @@ github: "http://github.com/organization/blankjekyll.github.io"
 copyright:
   title: "Blog Title"
   author: "Kurtis Rainbolt-Greene"
+  avatar: "http://github.com/krainboltgreene.png"
 
 # Build settings
 markdown: redcarpet

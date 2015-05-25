@@ -2,7 +2,7 @@ $footer-backgroud-color: #2c3e50;
 $footer-action-color: #fff;
 
 body > footer {
-  padding-bottom: 250px;
+  padding-bottom: 150px;
   background-color: $footer-backgroud-color;
 
   h1.heading {
@@ -37,18 +37,29 @@ body > footer {
     }
   }
 
-  #logo {
-    text-align: center;
-    img {
-      border-radius: 100%
-    }
-  }
-
   #legal {
     @include outer-container;
     @include pad();
 
     text-align: center;
     color: darken($footer-action-color, 50%);
+
+    #disclaimer {
+      @include span-columns(6);
+      @include shift(3);
+    }
+
+    #copyright {
+      @include span-columns(6);
+      @include shift(3);
+
+    }
+  }
+
+  #logo {
+    text-align: center;
+    img {
+      border-radius: 100%
+    }
   }
 }

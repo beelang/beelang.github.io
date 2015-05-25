@@ -16,8 +16,8 @@ layout: default
     <p id="authors">
       Written by
       {% for author in page.authors %}
-        <a href="mailto:{{ author }}">{{ author }}</a>
-        <img class="avatar" src="/{{ author | slugify }}.jpg" alt="{{ author }}">
+        <a href="mailto:{{ author.email }}">{{ author.name }}</a>
+        <img class="avatar" src="{{ author.avatar }}" alt="{{ author.name }}">
       {% endfor %}
     </p>
   </header>

@@ -1,4 +1,4 @@
-$header-backgroud-color: #2c3e50;
+$header-backgroud-color: #3498db;
 $header-link-color: #fff;
 
 body > header {
@@ -6,25 +6,19 @@ body > header {
 
   #links {
     @include outer-container;
-
-    #brand {
-      @include span-columns(2);
-      background-color: lighten($header-backgroud-color, 10%);
-      padding: 0.5em 40px;
-      a {
-        color: $header-link-color;
-      }
-    }
-
     .links {
-      @include span-columns(6);
-
       .link {
-        @include span-columns(1 of 6);
-        margin: 0.5em 10px;
+        @include pad();
+        display: inline-block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
         a {
           color: $header-link-color;
         }
+      }
+      .brand {
+        font-size: 1.5em;
+        background-color: darken($header-backgroud-color, 10%);
       }
     }
   }

@@ -11,6 +11,8 @@ title: "<title>"
 summary: ""
 date: <date>
 authors:
-  - "Kurtis Rainbolt-Greene"
+  -
+    name: "Kurtis Rainbolt-Greene"
+    email: "me@kurtisrainboltgreene.name"
 ---
 """

@@ -4,29 +4,32 @@ title: "Home"
 ---
 
 <section id="posts">
-  <header>
-    <p class="heading">
-      Posts
-    </p>
-  </header>
+  <h1 class="heading">
+    Posts
+  </h1>
 
   <ul class="posts">
     {% for post in site.posts %}
-      <li class="post" data-title="{{ post.title }}" data-author="{{ post.author }}" data-timestamp="{{ post.date }}">
-        <figure class="image">
+      <li class="post" data-title="{{ post.title }}" data-authors="{{ post.authors | map: 'name' | join: ', ' }}" data-timestamp="{{ post.date }}">
+        <picture class="image">
           <icon class="fa fa-example">
-        </figure>
+        </picture>
+
         <article class="content">
           <header>
             <p class="title">
               <a href="{{ post.url }}">{{ post.title }}</a>
             </p>
 
-            <p class="authors">
-              by {{ post.authors | join: ", " }}
+            <p id="authors">
+              Written by
+              {% for author in post.authors %}
+                <a href="mailto:{{ author.email }}">{{ author.name }}</a>
+                <img class="avatar" src="{{ author.avatar }}" alt="{{ author.name }}">
+              {% endfor %}
             </p>
 
-            <p class="date">
+            <p class="timestamp">
               {{ post.date | date: "%Y/%m/%d" }}
             </p>
           </header>
