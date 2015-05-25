@@ -17,9 +17,9 @@ title: "Home"
 
         <article class="content">
           <header>
-            <p class="title">
+            <h2 class="title">
               <a href="{{ post.url }}">{{ post.title }}</a>
-            </p>
+            </h2>
 
             <p class="authors">
               Written by
@@ -27,7 +27,7 @@ title: "Home"
             </p>
 
             <p class="timestamp">
-              {{ post.date | date: "%Y/%m/%d" }}
+              <small><em>last updated <time>{{ post.date | date: "%Y/%m/%d" }}</time></em></small>
             </p>
           </header>
 
