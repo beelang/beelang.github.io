@@ -2,20 +2,29 @@ $footer-backgroud-color: #2c3e50;
 $footer-action-color: #fff;
 
 body > footer {
-  padding-bottom: 400px;
+  padding-bottom: 250px;
   background-color: $footer-backgroud-color;
+
+  h1.heading {
+    font-size: 1.8em;
+  }
+
+  h2.heading {
+    font-size: 1.5em;
+  }
 
   #information {
     @include pad();
     @include outer-container;
 
+    text-align: center;
+
+    .heading {
+      color: darken($footer-action-color, 50%);
+    }
+
     .column {
       @include span-columns(4);
-      text-align: center;
-      .heading {
-        color: darken($footer-action-color, 50%);
-        font-size: 1.5em;
-      }
     }
 
     .links {

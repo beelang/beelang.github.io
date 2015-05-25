@@ -1,11 +1,13 @@
 <footer role="contentinfo">
   <section id="information">
+    <h1 class="heading">
+      Information
+    </h1>
+
     <section class="column">
-      <header>
-        <p class="heading">
-          Pages
-        </p>
-      </header>
+      <h2 class="heading">
+        Pages
+      </h2>
 
       <ul class="links">
         <li class="link">
@@ -23,11 +25,9 @@
     </section>
 
     <section class="column">
-      <header>
-        <p class="heading">
-          Social
-        </p>
-      </header>
+      <h2 class="heading">
+        Social
+      </h2>
 
       <ul class="links">
         <li class="link">
@@ -45,19 +45,17 @@
     </section>
 
     <section class="column">
-      <header>
-        <p class="heading">
-          Legal
-        </p>
-      </header>
+      <h2 class="heading">
+        Legal
+      </h2>
 
       <ul class="links">
         <li class="link">
-          <a href="#">Terms &amp; Conditions</a>
+          <a href="/terms">Terms &amp; Conditions</a>
         </li>
 
         <li class="link">
-          <a href="#">Privacy Policy</a>
+          <a href="/policy">Privacy Policy</a>
         </li>
       </ul>
     </section>
@@ -65,22 +63,27 @@
 
   <figure id="logo">
     <img src="/logo.jpg" alt="Logo image">
+    <figcaption>
+
+    </figcaption>
   </figure>
 
   <section id="legal">
+    <h2 class="heading">
+      Legal
+    </h2>
+
     <p id="disclaimer">
       Cookie topping cookie gummi bears jelly caramels bonbon chocolate bar
       muffin. Cake pastry cake lemon drops liquorice sweet roll carrot cake
       cheesecake.
     </p>
 
-    <figure id="copyright">
-      <caption>
-        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ site.copyright.title }}</span>
-        by <a xmlns:cc="http://creativecommons.org/ns#" href="{{ site.url }}" property="cc:attributionName" rel="cc:attributionURL">{{ site.copyright.author }}</a>
-        is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-        Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ site.github }}" rel="dct:source">{{ site.github }}</a>.
-      </caption
-    </figure>
+    <p id="copyright">
+      {{ site.copyright.title }}
+      by <a rel="author" href="{{ site.url }}" >{{ site.copyright.author }}</a>
+      is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      Based on a work at <a rel="source" href="{{ site.github }}">{{ site.github }}</a>.
+    </p>
   </section>
 </footer>

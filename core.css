@@ -234,28 +234,31 @@ body > main {
   min-height: 700px; }
 
 body > footer {
-  padding-bottom: 400px;
+  padding-bottom: 250px;
   background-color: #2c3e50; }
+  body > footer h1.heading {
+    font-size: 1.8em; }
+  body > footer h2.heading {
+    font-size: 1.5em; }
   body > footer #information {
     padding: 2.35765%;
     max-width: 68em;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    text-align: center; }
     body > footer #information::after {
       clear: both;
       content: "";
       display: table; }
+    body > footer #information .heading {
+      color: gray; }
     body > footer #information .column {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%;
-      text-align: center; }
+      width: 31.76157%; }
       body > footer #information .column:last-child {
         margin-right: 0; }
-      body > footer #information .column .heading {
-        color: gray;
-        font-size: 1.5em; }
     body > footer #information .links .link a {
       color: #fff;
       text-decoration: underline; }
@@ -284,7 +287,41 @@ body > footer {
     clear: both;
     content: "";
     display: table; }
-  #posts .title {
+  #posts .heading {
     font-size: 1.8em; }
+
+#post {
+  min-height: 700px; }
+  #post header {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    #post header::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #post header .heading {
+      font-size: 2.7em; }
+    #post header #title {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #post header #title:last-child {
+        margin-right: 0; }
+    #post header #date {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #post header #date:last-child {
+        margin-right: 0; }
+    #post header #authors {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #post header #authors:last-child {
+        margin-right: 0; }
 
 /*# sourceMappingURL=core.css.map */
