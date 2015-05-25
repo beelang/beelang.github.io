@@ -1,0 +1,8 @@
+#posts {
+  @include outer-container;
+  @include pad();
+
+  .title {
+    font-size: 1.8em;
+  }
+}

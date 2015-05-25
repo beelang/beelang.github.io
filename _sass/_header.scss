@@ -1,0 +1,31 @@
+$header-backgroud-color: #2c3e50;
+$header-link-color: #fff;
+
+body > header {
+  background-color: $header-backgroud-color;
+
+  #links {
+    @include outer-container;
+
+    #brand {
+      @include span-columns(2);
+      background-color: lighten($header-backgroud-color, 10%);
+      padding: 0.5em 40px;
+      a {
+        color: $header-link-color;
+      }
+    }
+
+    .links {
+      @include span-columns(6);
+
+      .link {
+        @include span-columns(1 of 6);
+        margin: 0.5em 10px;
+        a {
+          color: $header-link-color;
+        }
+      }
+    }
+  }
+}

@@ -5,28 +5,33 @@ title: "Home"
 
 <section id="posts">
   <header>
-    <p>Posts</p>
+    <p class="heading">
+      Posts
+    </p>
   </header>
 
   <ul class="posts">
     {% for post in site.posts %}
-      <li class="post" data-author="{{ post.author }}" data-title="{{ post.title }}" data-timestamp="{{ post.date }}">
-        <article>
+      <li class="post" data-title="{{ post.title }}" data-author="{{ post.author }}" data-timestamp="{{ post.date }}">
+        <figure class="image">
+          <icon class="fa fa-example">
+        </figure>
+        <article class="content">
           <header>
-            <p>
+            <p class="title">
               <a href="{{ post.url }}">{{ post.title }}</a>
             </p>
 
-            <p>
+            <p class="authors">
               by {{ post.authors | join: ", " }}
             </p>
 
-            <p>
+            <p class="date">
               {{ post.date | date: "%Y/%m/%d" }}
             </p>
           </header>
 
-          <section>
+          <section class="blurb">
             <p>
               {{ post.blurb }}
             </p>

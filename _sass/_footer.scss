@@ -1,0 +1,45 @@
+$footer-backgroud-color: #2c3e50;
+$footer-action-color: #fff;
+
+body > footer {
+  padding-bottom: 400px;
+  background-color: $footer-backgroud-color;
+
+  #information {
+    @include pad();
+    @include outer-container;
+
+    .column {
+      @include span-columns(4);
+      text-align: center;
+      .heading {
+        color: darken($footer-action-color, 50%);
+        font-size: 1.5em;
+      }
+    }
+
+    .links {
+      .link {
+        a {
+          color: $footer-action-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #logo {
+    text-align: center;
+    img {
+      border-radius: 100%
+    }
+  }
+
+  #legal {
+    @include outer-container;
+    @include pad();
+
+    text-align: center;
+    color: darken($footer-action-color, 50%);
+  }
+}

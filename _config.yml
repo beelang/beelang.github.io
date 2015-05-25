@@ -1,6 +1,10 @@
 # Site settings
 title: "Blog Title"
 description: "The blog description."
+github: "http://github.com/organization/blankjekyll.github.io"
+copyright:
+  title: "Blog Title"
+  author: "Kurtis Rainbolt-Greene"
 
 # Build settings
 markdown: redcarpet
