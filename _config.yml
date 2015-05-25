@@ -6,6 +6,7 @@ copyright:
   title: "Blog Title"
   author: "Kurtis Rainbolt-Greene"
   avatar: "http://github.com/krainboltgreene.png"
+analytics: UA-18715035-10
 
 # Build settings
 markdown: redcarpet
