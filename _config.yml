@@ -1,11 +1,13 @@
 # Site settings
 title: "Blog Title"
 description: "The blog description."
+owner: "Kurtis Rainbolt-Greene"
+profiles:
+  -
+    url: "http://twitter.com/krainboltgreene"
+    name: "Twitter"
 github: "http://github.com/organization/blankjekyll.github.io"
 logo: "http://github.com/krainboltgreene.png"
-copyright:
-  title: "Blog Title"
-  author: "Kurtis Rainbolt-Greene"
 analytics: UA-18715035-10
 
 # Build settings

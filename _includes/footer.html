@@ -10,17 +10,11 @@
       </h2>
 
       <ul class="links">
-        <li class="link">
-          <a href="/posts">Posts</a>
-        </li>
-
-        <li class="link">
-          <a href="/details">Details</a>
-        </li>
-
-        <li class="link">
-          <a href="/contact">Contact</a>
-        </li>
+        {% for page in site.pages reversed %}
+          <li class="link">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </section>
 
@@ -30,33 +24,11 @@
       </h2>
 
       <ul class="links">
-        <li class="link">
-          <a href="#">Facebook</a>
-        </li>
-
-        <li class="link">
-          <a href="#">Twitter</a>
-        </li>
-
-        <li class="link">
-          <a href="#">YouTube</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="column">
-      <h2 class="heading">
-        Legal
-      </h2>
-
-      <ul class="links">
-        <li class="link">
-          <a href="/terms">Terms &amp; Conditions</a>
-        </li>
-
-        <li class="link">
-          <a href="/policy">Privacy Policy</a>
-        </li>
+        {% for profile in site.profiles %}
+          <li class="link">
+            <a rel="profile" href="{{ profile.url }}">{{ profile.name }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </section>
   </section>
@@ -73,8 +45,8 @@
     </p>
 
     <p id="copyright">
-      {{ site.copyright.title }}
-      by <a rel="author" href="{{ site.url }}" >{{ site.copyright.author }}</a>
+      {{ site.title }}
+      by <a rel="author" href="{{ site.url }}" >{{ site.owner }}</a>
       is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
       Based on a work at <a rel="source" href="{{ site.github }}">{{ site.github }}</a>.
     </p>
@@ -83,5 +55,4 @@
   <figure id="logo">
     <img class="logo" src="{{ site.logo }}" alt="Logo image">
   </figure>
-
 </footer>
