@@ -12,19 +12,26 @@ layout: default
     <p id="date">
       Last updated <time>{{ page.date | date: "%Y/%m/%d" }}</time>.
     </p>
-
-    <p id="authors">
-      Written by
-      {% for author in page.authors %}
-        <a href="mailto:{{ author.email }}">{{ author.name }}</a>
-        <img class="avatar" src="{{ author.avatar }}" alt="{{ author.name }}">
-      {% endfor %}
-    </p>
   </header>
 
   <article id="content">
     {{ content }}
   </article>
+
+  <footer>
+    <p>
+      Written by:
+    </p>
+
+    <ul class="authors">
+      {% for author in page.authors %}
+        <li class="author">
+          <img class="avatar" src="{{ author.avatar }}" alt="{{ author.name }}">
+          <a href="mailto:{{ author.email }}">{{ author.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </footer>
 </main>
 
 {% include footer.html %}

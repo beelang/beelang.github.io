@@ -21,12 +21,9 @@ title: "Home"
               <a href="{{ post.url }}">{{ post.title }}</a>
             </p>
 
-            <p id="authors">
+            <p class="authors">
               Written by
-              {% for author in post.authors %}
-                <a href="mailto:{{ author.email }}">{{ author.name }}</a>
-                <img class="avatar" src="{{ author.avatar }}" alt="{{ author.name }}">
-              {% endfor %}
+              {% for author in post.authors %}<a href="mailto:{{ author.email }}">{{ author.name }}</a>{% endfor %}.
             </p>
 
             <p class="timestamp">

@@ -308,11 +308,6 @@ body > footer {
       margin-right: 0; }
     #post header .heading {
       font-size: 2.7em; }
-    #post header #authors .avatar {
-      width: 24px;
-      height: 24px;
-      border-radius: 100%;
-      vertical-align: center; }
   #post #content {
     float: left;
     display: block;
@@ -323,5 +318,20 @@ body > footer {
       margin-right: 0; }
     #post #content blockquote {
       background-color: #ecf0f1; }
+  #post footer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    #post footer:last-child {
+      margin-right: 0; }
+    #post footer .author {
+      padding: 2.35765%; }
+      #post footer .author .avatar {
+        vertical-align: middle;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%; }
 
 /*# sourceMappingURL=core.css.map */
