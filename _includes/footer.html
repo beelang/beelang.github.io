@@ -6,13 +6,13 @@
 
     <section class="column">
       <h2 class="heading">
-        Pages
+        Links
       </h2>
 
       <ul class="links">
-        {% for page in site.pages reversed %}
+        {% for link in site.links reversed %}
           <li class="link">
-            <a href="{{ page.url }}">{{ page.title }}</a>
+            <a href="{{ link.url }}">{{ link.name }}</a>
           </li>
         {% endfor %}
       </ul>

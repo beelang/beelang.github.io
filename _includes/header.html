@@ -7,9 +7,9 @@
         </a>
       </li>
 
-      {% for page in site.pages %}
+      {% for link in site.links %}
         <li class="link">
-          <a href="{{ page.url }}">{{ page.title }}</a>
+          <a href="{{ link.url }}">{{ link.name }}</a>
         </li>
       {% endfor %}
     </ul>

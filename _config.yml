@@ -2,13 +2,17 @@
 title: "Blog Title"
 description: "The blog description."
 owner: "Kurtis Rainbolt-Greene"
-profiles:
-  -
-    url: "http://twitter.com/krainboltgreene"
-    name: "Twitter"
 github: "http://github.com/organization/blankjekyll.github.io"
 logo: "http://github.com/krainboltgreene.png"
 analytics: UA-18715035-10
+profiles:
+  -
+    name: "Twitter"
+    url: "http://twitter.com/krainboltgreene"
+links:
+  -
+    name: "About"
+    url: "/about"
 
 # Build settings
 markdown: redcarpet
