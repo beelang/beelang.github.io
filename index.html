@@ -5,24 +5,32 @@ title: "Home"
 
 <section id="examples">
   <article>
-{% highlight coffee %}
+{% highlight dragon %}
 {% raw %}
 Person: Object clone()
-  greeting: function
-    "My name is {{name}} and I'm age {{age}}."
+  greeting: function() observes(name, age)
+    interpolate("My name is {{name}} and I'm age {{age}}.")
 
-jordan: Person new(name: "Jane Howitzer", age: 31)
-#> {Person instance name: "Jane Howitzer", age: 31, greeting: {Function instance}}
+jordan: Person build(name: "Jane Howitzer", age: 31)
+#> Person instance(name: "Jane Howitzer", age: 31, greeting: Function instance(observes: (name, age)))
+
+jordan age()
+#> 31
 
 jordan greeting()
 #> "My name is Jane Howitzer and I'm age 31."
 
-
 jordan age: 32
+#> Person instance(name: "Jane Howitzer", age: 32, greeting: Function instance(observes: (name, age))})
+
 jordan greeting()
 #> "My name is Jane Howitzer and I'm age 32."
 {% endraw %}
 {% endhighlight %}
+
+    <p>
+      No keywords. First class Functions. First class referential transparency. First class organism oriented design.
+    </p>
   </article>
 </section>
 
