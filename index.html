@@ -11,15 +11,16 @@ Person: Object clone()
   greeting: function
     "My name is {{name}} and I'm age {{age}}."
 
-#> {Person object}
-
 jordan: Person new(name: "Jane Howitzer", age: 31)
-
 #> {Person instance name: "Jane Howitzer", age: 31, greeting: {Function instance}}
 
 jordan greeting()
+#> "My name is Jane Howitzer and I'm age 31."
 
-#> {"My name is Jane Howitzer and I'm age 31."}
+
+jordan age: 32
+jordan greeting()
+#> "My name is Jane Howitzer and I'm age 32."
 {% endraw %}
 {% endhighlight %}
   </article>
