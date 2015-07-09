@@ -19,6 +19,7 @@ links:
 
 # Build settings
 markdown: redcarpet
+highlighter: pygments
 permalink: /:title/
 exclude:
   - Gemfile

@@ -2,8 +2,18 @@
 @import "neat/neat";
 @import "bitters/bitters";
 
+$dark: #212121;
+$light: #F44336;
+
 @import "header";
-@import "main";
 @import "footer";
 @import "home";
 @import "post";
+
+p, ol, ul {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: underline;
+}

@@ -1,20 +1,15 @@
-#post {
-  @include outer-container;
-  @include pad();
-  min-height: 700px;
-
+#Post {
+  color: #FAFAFA;
+  background-color: $dark;
   header {
-    @include span-columns(6);
-    @include shift(3);
-
+    @include pad();
     .heading {
       font-size: 2.7em;
     }
   }
 
   #content {
-    @include span-columns(6);
-    @include shift(3);
+    @include pad();
 
     blockquote {
       background-color: #ecf0f1;
@@ -22,8 +17,9 @@
   }
 
   footer {
-    @include span-columns(6);
-    @include shift(3);
+    @include pad();
+    color: #FAFAFA;
+    background-color: $light;
 
     .author {
       @include pad();

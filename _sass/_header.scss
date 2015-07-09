@@ -1,5 +1,6 @@
-$header-backgroud-color: #3498db;
-$header-link-color: #fff;
+$header-backgroud-color: #F44336;
+$header-brand-backgroud-color: #212121;
+$header-link-color: #FAFAFA;
 
 body > header {
   background-color: $header-backgroud-color;
@@ -18,7 +19,7 @@ body > header {
       }
       .brand {
         font-size: 1.5em;
-        background-color: darken($header-backgroud-color, 10%);
+        background-color: $header-brand-backgroud-color;
       }
     }
   }

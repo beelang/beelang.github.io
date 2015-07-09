@@ -3,85 +3,112 @@ layout: "page"
 title: "Home"
 ---
 
-<section id="community">
-  <h1 class="heading">
-    Community
-  </h1>
+<section id="examples">
+  <article>
+{% highlight coffee %}
+{% raw %}
+Person: Object clone()
+  greeting: function
+    "My name is {{name}} and I'm age {{age}}."
+
+#> {Person object}
+
+jordan: Person new(name: "Jane Howitzer", age: 31)
+
+#> {Person instance name: "Jane Howitzer", age: 31, greeting: {Function instance}}
+
+jordan greeting()
+
+#> {"My name is Jane Howitzer and I'm age 31."}
+{% endraw %}
+{% endhighlight %}
+  </article>
+</section>
+
+<section id="installing">
+  <header>
+    <h1 class="heading">
+      Installing
+    </h1>
+  </header>
+
+  <article>
+    <ol>
+      <li>
+        Download from <a href="/setup">this link</a>
+      </li>
+
+      <li>
+        Some text related to the operating system
+      </li>
+
+      <li>
+        Following the instructions
+      </li>
+
+      <li>
+        Learn!
+      </li>
+    </ol>
+  </article>
 </section>
 
 <section id="documentation">
-  <h1 class="heading">
-    Documentation
-  </h1>
-</section>
+  <header>
+    <h1 class="heading">
+      Documentation
+    </h1>
+  </header>
 
-<section id="install">
-  <h1 class="heading">
-    Install
-  </h1>
+  <article>
+    <p>
+      Topping jelly beans pudding cotton candy caramels I love tiramisu. Jelly pastry apple pie jelly beans sugar plum chupa chups cheesecake danish. Wafer I love gingerbread halvah ice cream croissant gummies I love. Ice cream powder marshmallow chocolate icing. Cake dessert gingerbread chocolate.
+    </p>
 
-  <ol>
-    <li>
-      <p>
-        Download from <a href="/setup">this link</a>
-      </p>
-    </li>
-
-    <li>
-      <p>
-        Some text related to the operating system
-      </p>
-    </li>
-
-    <li>
-      <p>
-        Following the instructions
-      </p>
-    </li>
-
-    <li>
-      <p>
-        Learn!
-      </p>
-    </li>
-  </ol>
-</section>
-
-<section id="posts">
-  <h1 class="heading">
-    News
-  </h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li class="post" data-title="{{ post.title }}" data-authors="{{ post.authors | map: 'name' | join: ', ' }}" data-timestamp="{{ post.date }}">
-        <picture class="image">
-          <icon class="fa fa-example">
-        </picture>
-
-        <article class="content">
-          <header>
-            <h2 class="title">
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </h2>
-
-            <p class="authors">
-              Written by
-              {% for author in post.authors %}<a href="mailto:{{ author.email }}">{{ author.name }}</a>{% endfor %}.
-            </p>
-
-            <p class="timestamp">
-              <small><em>last updated <time>{{ post.date | date: "%Y/%m/%d" }}</time></em></small>
-            </p>
-          </header>
-
-          <section class="blurb">
-            <p>
-              {{ post.blurb }}
-            </p>
-          </section>
-        </article>
+    <ul>
+      <li>
+         Jelly chocolate bar chocolate cake croissant biscuit.
       </li>
-    {% endfor %}
-  </ul>
+
+      <li>
+        Biscuit pudding I love.
+      </li>
+    </ul>
+
+    <p>
+      Brownie marzipan muffin marshmallow I love gummi bears pudding liquorice jujubes.
+    </p>
+  </article>
+</section>
+
+<section id="community">
+  <header>
+    <h1 class="heading">
+      Community
+    </h1>
+  </header>
+
+  <article>
+    <p>
+      Cheesecake pie marzipan powder. Sweet marzipan chocolate sweet roll. Caramels sugar plum chupa chups I love cake I love I love gummies chocolate bar. Sesame snaps macaroon brownie dessert pastry. I love I love gummies wafer donut fruitcake oat cake tart. Wafer dessert jujubes halvah chupa chups pudding cheesecake sweet roll pie. Donut powder dessert marzipan. Bear claw cake tart oat cake. Liquorice I love lemon drops dessert sugar plum jujubes sweet pudding. Jelly beans sweet roll I love soufflé gummi bears. Jujubes chocolate cake brownie marzipan jelly beans. Toffee wafer bear claw sugar plum apple pie topping macaroon brownie. Marshmallow I love I love. Pie caramels pie danish pudding sweet roll.
+    </p>
+  </article>
+</section>
+
+<section id="news">
+  <header>
+    <h1 class="heading">
+      Latest News
+    </h1>
+  </header>
+
+  <article>
+    <ol>
+      {% for post in site.posts | order: 'date'  %}
+        <li>
+          <a class="name" href="{{ post.url }}">{{ post.title }}</a> - <strong class="summary">{{ post.summary }}</strong> - <em class="authors">Written by {% for author in post.authors %}<a href="mailto:{{ author.email }}">{{ author.name }}</a>{% endfor %}.</em> - <time class="timestamp">Last updated {{ post.date | date: "%Y/%m/%d" }}</time>
+        </li>
+      {% endfor %}
+    </ol>
+  </article>
 </section>

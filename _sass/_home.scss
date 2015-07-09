@@ -1,8 +1,55 @@
-#posts {
-  @include outer-container;
-  @include pad();
+#Home {
+  header {
+    @include outer-container;
 
-  .heading {
-    font-size: 1.8em;
+    .heading {
+      font-size: 3em;
+    }
+  }
+
+  article {
+    @include outer-container;
+    @include pad();
+  }
+
+  ol, ul {
+    @include pad();
+    list-style-type: inherit;
+  }
+
+  #examples {
+    @include pad();
+    color: #FAFAFA;
+    background-color: $dark;
+  }
+
+  #installing {
+    @include pad();
+    color: #FAFAFA;
+    background-color: $dark;
+  }
+
+  #documentation {
+    @include pad();
+    color: #FAFAFA;
+    background-color: $light;
+    a {
+      color: #d8ebfd;
+    }
+  }
+
+  #community {
+    @include pad();
+    color: #FAFAFA;
+    background-color: $dark;
+  }
+
+  #news {
+    @include pad();
+    color: #FAFAFA;
+    background-color: $light;
+    a {
+      color: #d8ebfd;
+    }
   }
 }

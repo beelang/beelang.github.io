@@ -192,7 +192,7 @@ picture {
   max-width: 100%; }
 
 body > header {
-  background-color: #3498db; }
+  background-color: #F44336; }
   body > header #links {
     max-width: 68em;
     margin-left: auto;
@@ -207,17 +207,14 @@ body > header {
       padding-top: 0.5em;
       padding-bottom: 0.5em; }
       body > header #links .links .link a {
-        color: #fff; }
+        color: #FAFAFA; }
     body > header #links .links .brand {
       font-size: 1.5em;
-      background-color: #217dbb; }
-
-body > main {
-  min-height: 700px; }
+      background-color: #212121; }
 
 body > footer {
   padding-bottom: 150px;
-  background-color: #2c3e50; }
+  background-color: #212121; }
   body > footer h1.heading {
     font-size: 1.8em; }
   body > footer h2.heading {
@@ -233,7 +230,7 @@ body > footer {
       content: "";
       display: table; }
     body > footer #information .heading {
-      color: gray; }
+      color: #7b7b7b; }
     body > footer #information .column {
       float: left;
       display: block;
@@ -242,7 +239,7 @@ body > footer {
       body > footer #information .column:last-child {
         margin-right: 0; }
     body > footer #information .links .link a {
-      color: #fff;
+      color: #FAFAFA;
       text-decoration: underline; }
   body > footer #legal {
     max-width: 68em;
@@ -250,7 +247,7 @@ body > footer {
     margin-right: auto;
     padding: 2.35765%;
     text-align: center;
-    color: gray; }
+    color: #7b7b7b; }
     body > footer #legal::after {
       clear: both;
       content: "";
@@ -276,62 +273,80 @@ body > footer {
     body > footer #logo img {
       border-radius: 100%; }
 
-#posts {
+#Home header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #Home header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #Home header .heading {
+    font-size: 3em; }
+#Home article {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   padding: 2.35765%; }
-  #posts::after {
+  #Home article::after {
     clear: both;
     content: "";
     display: table; }
-  #posts .heading {
-    font-size: 1.8em; }
-
-#post {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
+#Home ol, #Home ul {
   padding: 2.35765%;
-  min-height: 700px; }
-  #post::after {
-    clear: both;
-    content: "";
-    display: table; }
-  #post header {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%; }
-    #post header:last-child {
-      margin-right: 0; }
-    #post header .heading {
+  list-style-type: inherit; }
+#Home #examples {
+  padding: 2.35765%;
+  color: #FAFAFA;
+  background-color: #212121; }
+#Home #installing {
+  padding: 2.35765%;
+  color: #FAFAFA;
+  background-color: #212121; }
+#Home #documentation {
+  padding: 2.35765%;
+  color: #FAFAFA;
+  background-color: #F44336; }
+  #Home #documentation a {
+    color: #d8ebfd; }
+#Home #community {
+  padding: 2.35765%;
+  color: #FAFAFA;
+  background-color: #212121; }
+#Home #news {
+  padding: 2.35765%;
+  color: #FAFAFA;
+  background-color: #F44336; }
+  #Home #news a {
+    color: #d8ebfd; }
+
+#Post {
+  color: #FAFAFA;
+  background-color: #212121; }
+  #Post header {
+    padding: 2.35765%; }
+    #Post header .heading {
       font-size: 2.7em; }
-  #post #content {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%; }
-    #post #content:last-child {
-      margin-right: 0; }
-    #post #content blockquote {
+  #Post #content {
+    padding: 2.35765%; }
+    #Post #content blockquote {
       background-color: #ecf0f1; }
-  #post footer {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%; }
-    #post footer:last-child {
-      margin-right: 0; }
-    #post footer .author {
+  #Post footer {
+    padding: 2.35765%;
+    color: #FAFAFA;
+    background-color: #F44336; }
+    #Post footer .author {
       padding: 2.35765%; }
-      #post footer .author .avatar {
+      #Post footer .author .avatar {
         vertical-align: middle;
         width: 36px;
         height: 36px;
         border-radius: 100%; }
+
+p, ol, ul {
+  font-size: 1.5em; }
+
+a {
+  text-decoration: underline; }
 
 /*# sourceMappingURL=core.css.map */
