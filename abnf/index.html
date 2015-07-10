@@ -1,0 +1,60 @@
+---
+layout: "page"
+title: "ABNF"
+---
+
+<section id="ABNF">
+  <header>
+    <h1 class="heading">
+      About
+    </h1>
+  </header>
+
+  <article>
+{% highlight bnf %}
+space = "\s" | "\t";
+newline = "\n" | "\r";
+white space = { space };
+
+upper letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
+lower letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z";
+letter = upper letter | lower letter;
+
+zero = "0";
+nonzero = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+digit = zero | nonzero;
+positive = nonzero, { digit };
+decimal = ( positive, ".", { digit }, positive )
+        | ( positive, ".", zero )
+        | ( zero, ".", { digit }, positive );
+negative = "-", decimal | positive;
+number = negative | positive | decimal | zero;
+
+symbol = "." | "?" | "!"| '"' | "'" | "," | "_" | "@" | "$" | "%" | "^" | "&" | "/" | "\" | "`" | "~" | "-" | "|" | "=" | "*" | "<" | ">" | "+";
+
+character = letter | digit | symbol;
+word = letter | symbol, { character };
+
+single quoted = "'", [{ '\', ANY | "'"?, ANY }], "'";
+double quoted = '"', [{ '\', ANY | '"'?, ANY }], '"';
+text = single quote | double quote
+
+comment = "#", { any };
+symbol = "?" | "!" | "_" | "@" | "$" | "%" | "^" | "&" | "/" | "\" | "~" | "-" | "|" | "=" | "*" | "<" | ">" | ";" | "+";
+
+brace container = "{", white space, [ assignment, { white space, ",", white space, assignment } ], white space, "}";
+bracket container = "[", white space, [ arguments ], white space, "]";
+
+function = word, arguments
+argument = ",", { space }, expression;
+arguments = "(", { expression, { argument } }, ")";
+expression = number | text | container | function;
+expressions = { expression, [space] };
+assignment = word, ":", white space, expressions;
+
+indent = { 2 * white space }
+line = expression | assignment, newline;
+lines = { line };
+{% endhighlight %}
+  </article>
+</section>
