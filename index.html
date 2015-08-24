@@ -7,11 +7,12 @@ title: "Home"
   <article>
 {% highlight text %}
 {% raw %}
-Person: Object clone()
-  greeting: function() observes(name, age)
+
+Person: Object() clone()
+  greeting: function() observe(name) observe(age)
     interpolate("My name is {{name}} and I'm age {{age}}.")
 
-jordan: Person build(name: "Jane Howitzer", age: 31)
+jordan: Person() build(name: "Jane Howitzer", age: 31)
 #> Person instance(name: "Jane Howitzer", age: 31, greeting: Function instance(observes: (name, age)))
 
 jordan age()
@@ -27,10 +28,17 @@ jordan greeting()
 #> "My name is Jane Howitzer and I'm age 32."
 {% endraw %}
 {% endhighlight %}
-
+  
     <p>
-      No keywords. First class Functions. First class referential transparency. First class organism oriented design.
+      Dragon is a organism oriented programming language, specifically designed with syntax simplicity in mind.
     </p>
+    <ul>
+      <li>No keywords.</li>
+      <li>No duplicate syntax.</li>
+      <li>Everything is a function</li>
+      <li>First class functions.</li>
+      <li>First class fbjects</li>
+    </ul>
   </article>
 </section>
 
