@@ -12,19 +12,19 @@ Person: Object() clone()
   greeting: function() observe(name) observe(age)
     interpolate("My name is {{name}} and I'm age {{age}}.")
 
-jordan: Person() build(name: "Jane Howitzer", age: 31)
+jane: Person() build(name: "Jane Howitzer", age: 31)
 #> Person instance(name: "Jane Howitzer", age: 31, greeting: Function instance(observes: (name, age)))
 
-jordan age()
+jane age()
 #> 31
 
-jordan greeting()
+jane greeting()
 #> "My name is Jane Howitzer and I'm age 31."
 
-jordan age: 32
+jane age: 32
 #> Person instance(name: "Jane Howitzer", age: 32, greeting: Function instance(observes: (name, age))})
 
-jordan greeting()
+jane greeting()
 #> "My name is Jane Howitzer and I'm age 32."
 {% endraw %}
 {% endhighlight %}
