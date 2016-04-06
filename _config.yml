@@ -1,17 +1,17 @@
 # Site settings
-title: "DRAGON"
-description: "The official website of the Dragon programming language"
+title: "🐝 lang"
+description: "The official website of the 🐝  programming language"
 owner: "Kurtis Rainbolt-Greene"
-github: "http://github.com/dragonlang/dragonlang.github.io"
-logo: "http://github.com/dragonlang.png"
+github: "http://github.com/beelang/beelang.github.io"
+logo: "http://github.com/beelang.png"
 analytics: UA-18715035-11
 profiles:
   -
     name: "Twitter"
-    url: "http://twitter.com/dragonlang"
+    url: "http://twitter.com/beelang"
   -
     name: "Github"
-    url: "http://github.com/dragonlang"
+    url: "http://github.com/beelang"
 links:
   -
     name: "About"
